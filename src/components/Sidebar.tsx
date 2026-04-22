@@ -23,11 +23,18 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
 
   return (
     <aside className="fixed left-0 top-0 h-screen w-64 bg-white border-r border-gray-100 flex flex-col z-50">
-      <div className="p-8 flex items-center gap-3">
-        <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/20">
-          <Award size={24} />
+      <div className="p-8 pb-4 flex flex-col items-center gap-4">
+        <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-premium overflow-hidden group">
+          <img 
+            src="/src/assets/personal_logo.png" 
+            className="w-full h-full object-contain p-2 group-hover:scale-110 transition-transform duration-500" 
+            alt="AHMD Logo" 
+          />
         </div>
-        <span className="text-xl font-bold font-heading text-primary tracking-tight">JCI Manager</span>
+        <div className="text-center">
+          <span className="text-xl font-bold font-heading text-primary tracking-tighter block">AHMD MANAGER</span>
+          <span className="text-[8px] font-bold text-text-muted uppercase tracking-[0.3em]">Official Dashboard</span>
+        </div>
       </div>
 
       <nav className="flex-1 px-4 py-4 space-y-2">
