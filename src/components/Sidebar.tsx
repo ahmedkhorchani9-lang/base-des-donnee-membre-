@@ -1,5 +1,4 @@
-import React from 'react'
-import { LayoutDashboard, Users, PieChart, Award } from 'lucide-react'
+import { LayoutDashboard, Users, PieChart } from 'lucide-react'
 
 interface SidebarProps {
   activeTab: string
