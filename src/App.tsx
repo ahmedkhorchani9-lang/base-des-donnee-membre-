@@ -10,6 +10,7 @@ import MemberProfileModal from './components/MemberProfileModal'
 import Toast from './components/Toast'
 import type { ToastType } from './components/Toast'
 import { AnimatePresence } from 'framer-motion'
+import personalLogo from './assets/personal_logo.png'
 import './index.css'
 
 export interface Member {
@@ -120,11 +121,11 @@ function App() {
 
         <footer className="py-12 border-t border-gray-50 flex flex-col items-center gap-4">
           <div className="flex items-center gap-3 grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-             <img src="/src/assets/personal_logo.png" className="h-6 w-auto" alt="AHMD Small" />
-             <span className="text-xs font-bold tracking-widest text-text-main">AHMD DESIGN</span>
+             <img src={personalLogo} className="h-6 w-auto" alt="Logo" />
+             <span className="text-xs font-bold tracking-widest text-text-main">JCI DESIGN</span>
           </div>
           <div className="text-center space-y-1">
-            <p className="text-sm font-bold text-text-main">Member Intelligence Dashboard</p>
+            <p className="text-sm font-bold text-text-main uppercase tracking-widest">JCI MEDENINE DATABASE</p>
             <p className="text-[10px] text-text-muted font-bold tracking-widest uppercase mb-2">Developed by Ahmed Baha Eddine Khorchani</p>
             <p className="text-[9px] text-text-muted font-medium opacity-50">
               © 2026 AHMD Systems • All Rights Reserved for Branding & Design

@@ -1,4 +1,5 @@
 import { LayoutDashboard, Users, PieChart } from 'lucide-react'
+import personalLogo from '../assets/personal_logo.png'
 
 interface SidebarProps {
   activeTab: string
@@ -25,14 +26,14 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
       <div className="p-8 pb-4 flex flex-col items-center gap-4">
         <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-premium overflow-hidden group">
           <img 
-            src="/src/assets/personal_logo.png" 
+            src={personalLogo} 
             className="w-full h-full object-contain p-2 group-hover:scale-110 transition-transform duration-500" 
-            alt="AHMD Logo" 
+            alt="Logo" 
           />
         </div>
         <div className="text-center">
-          <span className="text-xl font-bold font-heading text-primary tracking-tighter block">AHMD MANAGER</span>
-          <span className="text-[8px] font-bold text-text-muted uppercase tracking-[0.3em]">Official Dashboard</span>
+          <span className="text-lg font-bold font-heading text-primary tracking-tighter block leading-tight">JCI MEDENINE</span>
+          <span className="text-[10px] font-bold text-text-muted uppercase tracking-[0.2em]">DATABASE</span>
         </div>
       </div>
 
