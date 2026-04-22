@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #F5F7FA;
+  --color-card: #FFFFFF;
+  --color-primary: #005BAA;
+  --color-button: #0072CE;
+  --color-text-main: #1F2937;
+  --color-text-muted: #6B7280;
+  --color-danger: #EF4444;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+
+  --font-sans: "Inter", "sans-serif";
+  --font-heading: "Outfit", "sans-serif";
+
+  --shadow-premium: 0 4px 20px -2px rgba(0, 91, 170, 0.1);
+  --shadow-premium-hover: 0 10px 30px -5px rgba(0, 91, 170, 0.15);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text-main font-sans;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #005BAA 0%, #0072CE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
