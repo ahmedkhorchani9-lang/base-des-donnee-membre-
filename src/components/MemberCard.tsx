@@ -73,7 +73,7 @@ const MemberCard: React.FC<MemberCardProps> = ({ member, onViewProfile, onEdit, 
       <div className="flex items-center gap-4 mb-6">
         <div className="relative">
           <img 
-            src={member.avatar} 
+            src={member.avatarUrl} 
             alt={member.name} 
             className="w-16 h-16 rounded-2xl object-cover ring-2 ring-gray-50"
           />

@@ -9,7 +9,7 @@ export const list = query({
     return Promise.all(
       members.map(async (member) => ({
         ...member,
-        avatar: (member.storageId 
+        avatarUrl: (member.storageId 
           ? await ctx.storage.getUrl(member.storageId) 
           : member.avatarUrl) ?? `https://i.pravatar.cc/150?u=${member._id}`,
       }))

@@ -32,7 +32,7 @@ const MemberModal: React.FC<MemberModalProps> = ({
     parrain: '',
     joined_date: new Date().toISOString().split('T')[0],
     status: 'Active',
-    avatar: 'https://i.pravatar.cc/150?u=' + Math.random(),
+    avatarUrl: 'https://i.pravatar.cc/150?u=' + Math.random(),
     storageId: undefined
   })
   
@@ -42,10 +42,10 @@ const MemberModal: React.FC<MemberModalProps> = ({
 
   useEffect(() => {
     if (initialData) {
-      const { _id, _creationTime, avatar, ...data } = initialData as any
+      const { _id, _creationTime, avatarUrl, ...data } = initialData as any
       setFormData({ 
         ...data, 
-        avatar, 
+        avatarUrl, 
         gender: data.gender || 'Male',
         level: data.level || 'Junior'
       })
@@ -60,7 +60,7 @@ const MemberModal: React.FC<MemberModalProps> = ({
         parrain: '',
         joined_date: new Date().toISOString().split('T')[0],
         status: 'Active',
-        avatar: 'https://i.pravatar.cc/150?u=' + Math.random(),
+        avatarUrl: 'https://i.pravatar.cc/150?u=' + Math.random(),
         storageId: undefined
       })
     }
@@ -91,7 +91,7 @@ const MemberModal: React.FC<MemberModalProps> = ({
 
       const { storageId } = await result.json();
       
-      setFormData((prev: any) => ({ ...prev, storageId, avatar: URL.createObjectURL(file) }));
+      setFormData((prev: any) => ({ ...prev, storageId, avatarUrl: URL.createObjectURL(file) }));
       setIsUploading(false);
       setUploadProgress(100);
     } catch (err) {
@@ -110,8 +110,8 @@ const MemberModal: React.FC<MemberModalProps> = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     const submissionData = { ...formData };
-    if (submissionData.avatar.startsWith('blob:')) {
-      delete (submissionData as any).avatar;
+    if (submissionData.avatarUrl.startsWith('blob:')) {
+      delete (submissionData as any).avatarUrl;
     }
     onSubmit(submissionData)
     onClose()
@@ -154,7 +154,7 @@ const MemberModal: React.FC<MemberModalProps> = ({
                   onClick={() => !isUploading && fileInputRef.current?.click()}
                 >
                   <div className="w-24 h-24 rounded-3xl overflow-hidden ring-4 ring-primary/10 group-hover:ring-primary/20 transition-all shadow-lg relative">
-                    <img src={formData.avatar} className="w-full h-full object-cover" alt="Avatar" />
+                    <img src={formData.avatarUrl} className="w-full h-full object-cover" alt="Avatar" />
                     
                     <AnimatePresence>
                       {isUploading && (

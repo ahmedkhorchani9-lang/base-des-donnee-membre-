@@ -24,7 +24,7 @@ export interface Member {
   status: string
   gender: string 
   level: string
-  avatar: string 
+  avatarUrl: string 
   storageId?: string
 }
 

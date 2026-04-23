@@ -47,7 +47,7 @@ const MemberProfileModal: React.FC<MemberProfileModalProps> = ({ member, onClose
             <div className="w-full md:w-2/5 bg-primary/5 p-8 flex flex-col items-center border-b md:border-b-0 md:border-r border-gray-100">
               <div className="relative mb-6">
                 <img 
-                  src={member.avatar} 
+                  src={member.avatarUrl} 
                   alt={member.name} 
                   className="w-32 h-32 rounded-[2rem] object-cover ring-8 ring-white shadow-xl"
                 />
